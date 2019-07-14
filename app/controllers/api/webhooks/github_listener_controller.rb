@@ -9,9 +9,12 @@ module Api
           )
         end
 
-        ::IssueEventParser.call(payload: params)
+        parsed_payload = ::IssueEventParser.call(payload: request_payload)
+        saved = ::EventProcessor.call(params: parsed_payload)
 
-        render json: { message: 'ok' }
+        return render json: { error: 'Could not process event.' } unless saved
+
+        render json: { message: 'Event registered.' }
       end
 
       private
