@@ -13,9 +13,13 @@ class IssueEventParser
 
   def parse_payload
     {
-      issue_id: @payload[:issue][:id],
-      action: @payload[:action],
-      payload: @payload.to_json
+      issue_id: json_hash[:issue][:id],
+      action: json_hash[:action],
+      payload: json_hash
     }
+  end
+
+  def json_hash
+    JSON.parse(@payload).with_indifferent_access
   end
 end
