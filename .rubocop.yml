@@ -6,6 +6,11 @@ Metrics/MethodLength:
 Metrics/LineLength:
   Max: 120
 
+Metrics/BlockLength:
+  Enabled: true
+  Exclude: 
+    - spec/**/*
+
 Naming/AccessorMethodName:
   Enabled: false
 
