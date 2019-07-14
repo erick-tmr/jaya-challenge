@@ -5,8 +5,6 @@ class ApplicationController < ActionController::API
   ].freeze
   CONTENT_TYPE = 'application/vnd.api+json'.freeze
 
-  rescue_from ActiveRecord::RecordNotFound, with: :not_found_response
-
   protected
 
   def render_json_response(opts = {})
@@ -27,13 +25,5 @@ class ApplicationController < ActionController::API
 
   def collection?(resources)
     resources.is_a?(Array) || ACTIVE_RECORDS_COLLECTION_CLASSES.include?(resources.class.name)
-  end
-
-  def not_found_response
-    render json: {
-      errors: [
-        { source: :resource, title: 'Requested resource not found.' }
-      ]
-    }, status: :not_found, content_type: CONTENT_TYPE
   end
 end
