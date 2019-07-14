@@ -3,6 +3,9 @@ require: rubocop-rails
 Metrics/MethodLength:
   Enabled: false
 
+Metrics/LineLength:
+  Max: 120
+
 Naming/AccessorMethodName:
   Enabled: false
 
