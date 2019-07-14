@@ -2,7 +2,7 @@
 
 Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
-    resources :issues, only: [:index] do
+    resources :issues, only: [:index, :show] do
       resources :events, only: [:index]
     end
 
