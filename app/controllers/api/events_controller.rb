@@ -20,7 +20,7 @@ module Api
     end
 
     def requested_issue
-      Issue.find_by(github_id: issue_github_id)
+      @requested_issue ||= Issue.find_by(github_id: issue_github_id)
     end
   end
 end
