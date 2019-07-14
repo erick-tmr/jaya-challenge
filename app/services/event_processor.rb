@@ -1,4 +1,6 @@
 class EventProcessor
+  include Instrumentation::BaseService
+
   def initialize(opts = {})
     @params = opts.fetch(:params, {})
   end
@@ -23,7 +25,10 @@ class EventProcessor
   def create_event
     new_event = Event.new(
       action: @params[:action],
-      payload: @params[:payload]
+      payload: @params[:payload],
+      issue: @issue
     )
+
+    new_event.save
   end
 end
