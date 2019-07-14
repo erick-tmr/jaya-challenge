@@ -4,7 +4,7 @@ module Api
       def listen
         unless valid_github_signature?
           return render(
-            json: { error: 'Could not recognize payload signature.' },
+            json: error_response('Could not recognize payload signature.'),
             status: :internal_server_error
           )
         end
@@ -12,7 +12,7 @@ module Api
         parsed_payload = ::IssueEventParser.call(payload: request_payload)
         saved = ::EventProcessor.call(params: parsed_payload)
 
-        return render json: { error: 'Could not process event.' } unless saved
+        return render(json: error_response('Could not process event.'), status: :internal_server_error) unless saved
 
         render json: { message: 'Event registered.' }
       end
@@ -30,6 +30,12 @@ module Api
         )
 
         Rack::Utils.secure_compare(signature, request.headers['X-Hub-Signature'])
+      end
+
+      def error_response(message)
+        {
+          error: message
+        }
       end
     end
   end
