@@ -1,24 +1,3 @@
-# README
+# Jaya Challenge Solution
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This repository is a solution to this proposed challenge ([link to the challenge statement](https://jaya.tech/ "Repository problem statement")) from [Jaya](https://jaya.tech/ "Jaya's Homepage").
