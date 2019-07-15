@@ -71,7 +71,7 @@ This API partially implements the [Json API specification](https://jsonapi.org/ 
 
 #### GET /issues
 
-Link: https://takeshi-jaya-challenge.herokuapp.com/api/issues
+Link: `https://takeshi-jaya-challenge.herokuapp.com/api/issues`
 
 Returns a collection from the collected issues from the webhook.
 
@@ -84,7 +84,7 @@ Data set:
 
 #### GET /issues/:github_id
 
-Link: https://takeshi-jaya-challenge.herokuapp.com/api/issues/<github_id>
+Link: `https://takeshi-jaya-challenge.herokuapp.com/api/issues/<github_id>`
 
 Returns a specific issue collected from the webhook.
 
@@ -97,7 +97,7 @@ Data set:
 
 #### GET /issues/:github_id/events
 
-Link: https://takeshi-jaya-challenge.herokuapp.com/api/issues/<github_id>/events
+Link: `https://takeshi-jaya-challenge.herokuapp.com/api/issues/<github_id>/events`
 
 Returns the events from the specified issue collected from the webhook.
 
