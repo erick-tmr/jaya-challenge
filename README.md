@@ -2,7 +2,7 @@
 
 ## Proposition
 
-This is an API that listens to the Github API [Issue Events](https://developer.github.com/v3/activity/events/types/#issuesevent "Github API's documentation") through webhooks and exposes then in it's endpoints.
+This is an API that listens to the Github API [Issue Events](https://developer.github.com/v3/activity/events/types/#issuesevent "Github API's documentation") through webhooks and exposes then in its endpoints.
 
 This repository is a solution to this proposed challenge ([link to the challenge statement](https://takeshi-jaya-challenge.herokuapp.com/developer-test-v2.1.pdf "Repository problem statement")) from [Jaya](https://jaya.tech/ "Jaya's Homepage").
 
@@ -60,7 +60,7 @@ If the text from the output is green :green_heart: means that the test passed an
 
 This project is live [here](https://takeshi-jaya-challenge.herokuapp.com/ "Repository Heroku link").
 
-This is a [Restful](https://restfulapi.net/ "Restful API explanation") API, it consists in two modules:
+This is a [Restful](https://restfulapi.net/ "Restful API explanation") API, it consists of two modules:
 
 * The Webhooks endpoints, that listen's to the Github API Events.
 * The resources endpoints, that lists the collected events.
