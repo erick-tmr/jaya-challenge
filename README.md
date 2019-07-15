@@ -130,7 +130,7 @@ To store the whole payload from the webhook event it was chose the PostgreSQL [J
 
 To drive this decision this [article](https://www.citusdata.com/blog/2016/07/14/choosing-nosql-hstore-json-jsonb/ "JSON vs JSONB article") was used.
 
-The resources endpoints are not paginated, so it could potentially slow down or even time out when a large amout of events were registered.
+The resources endpoints are not paginated, so it could potentially slow down or even timeout when a large amout of events were registered.
 
 ## Last words
 
