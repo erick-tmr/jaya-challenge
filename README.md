@@ -42,7 +42,7 @@ cd ./ (to the repository folder)
 rspec
 ```
 
-You should see something like:
+You should see something like this:
 
 ```
 EventProcessor
