@@ -34,7 +34,7 @@ rails s
 
 This project uses [Rspec](https://rspec.info/ "Rspec's Homepage") as it's testing tool.
 
-To run the entire test suite run:
+To run the entire test suite, run:
 
 ```
 cd ./ (to the repository folder)
